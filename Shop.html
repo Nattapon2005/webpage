@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping</title>
+
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="shoping.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+
+        <div class="nav-cart" id="nav-cart-price" style="display: none;">
+            <div onclick="Close()" id="CloseCart_01" class="nav-cart-bg"></div>
+            <div class="nav-cart-con nav-w">
+
+                <div class="nav-cart-top">
+                    <div class="nav-cart-your">
+                        <p>Your Cart</p>
+                    </div>
+                    <div onclick="Close()" id="CloseCart_02" class="nav-cart-close">
+                        <svg width="16px" height="16px" viewBox="0 0 16 16"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g fill-rule="nonzero" fill="#333333"><polygon points="6.23223305 8 0.616116524 13.6161165 2.38388348 15.3838835 8 9.76776695 13.6161165 15.3838835 15.3838835 13.6161165 9.76776695 8 15.3838835 2.38388348 13.6161165 0.616116524 8 6.23223305 2.38388348 0.616116524 0.616116524 2.38388348 6.23223305 8"></polygon></g></g></svg>
+                    </div>
+                </div>
+
+                <!-- overflow: scroll;  -->
+
+                <div class="scroll">
+                    
+                    <div class="nav-cart-class-product">
+                        <div class="nav-cart-class-product-con">
+                            <div class="nav-cart-class-product-img">
+                                <div class="nav-cart-class-product-img-con">
+                                    <img src="https://uploads-ssl.webflow.com/5e853c3383474026e43f2c78/5e8542198347409e463f436b_jakob-owens-O_bhy3TnSYU-unsplash.jpg" alt="">
+                                    <div class="nav-cart-class-product-img-litle">
+                                        <h2>Green Canvas Pack</h2>
+                                        <p>$ 125.00 USD</p>
+                                    </div>
+                                </div>
+                                <div class="nav-cart-btn-price">
+                                    <a href="#">Remove</a>
+                                </div>
+                            </div>
+                            <div class="nav-cart-class-product-price">
+                                <input type="number">
+                            </div>
+                        </div>
+                    </div>
+    
+                    
+    
+                    <div class="nav-cart-class-product">
+                        <div class="nav-cart-class-product-con">
+                            <div class="nav-cart-class-product-img">
+                                <div class="nav-cart-class-product-img-con">
+                                    <img src="https://uploads-ssl.webflow.com/5e853c3383474026e43f2c78/5e8542198347409e463f436b_jakob-owens-O_bhy3TnSYU-unsplash.jpg" alt="">
+                                    <div class="nav-cart-class-product-img-litle">
+                                        <h2>Green Canvas Pack</h2>
+                                        <p>$ 125.00 USD</p>
+                                    </div>
+                                </div>
+                                <div class="nav-cart-btn-price">
+                                    <a href="#">Remove</a>
+                                </div>
+                            </div>
+                            <div class="nav-cart-class-product-price">
+                                <input type="number">
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                    <div class="nav-cart-class-product">
+                        <div class="nav-cart-class-product-con">
+                            <div class="nav-cart-class-product-img">
+                                <div class="nav-cart-class-product-img-con">
+                                    <img src="https://uploads-ssl.webflow.com/5e853c3383474026e43f2c78/5e8542198347409e463f436b_jakob-owens-O_bhy3TnSYU-unsplash.jpg" alt="">
+                                    <div class="nav-cart-class-product-img-litle">
+                                        <h2>Green Canvas Pack</h2>
+                                        <p>$ 125.00 USD</p>
+                                    </div>
+                                </div>
+                                <div class="nav-cart-btn-price">
+                                    <a href="#">Remove</a>
+                                </div>
+                            </div>
+                            <div class="nav-cart-class-product-price">
+                                <input type="number">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="nav-cart-class-product">
+                        <div class="nav-cart-class-product-con">
+                            <div class="nav-cart-class-product-img">
+                                <div class="nav-cart-class-product-img-con">
+                                    <img src="https://uploads-ssl.webflow.com/5e853c3383474026e43f2c78/5e8542198347409e463f436b_jakob-owens-O_bhy3TnSYU-unsplash.jpg" alt="">
+                                    <div class="nav-cart-class-product-img-litle">
+                                        <h2>Green Canvas Pack</h2>
+                                        <p>$ 125.00 USD</p>
+                                    </div>
+                                </div>
+                                <div class="nav-cart-btn-price">
+                                    <a href="#">Remove</a>
+                                </div>
+                            </div>
+                            <div class="nav-cart-class-product-price">
+                                <input type="number">
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                    <div class="nav-cart-class-product">
+                        <div class="nav-cart-class-product-con">
+                            <div class="nav-cart-class-product-img">
+                                <div class="nav-cart-class-product-img-con">
+                                    <img src="https://uploads-ssl.webflow.com/5e853c3383474026e43f2c78/5e8542198347409e463f436b_jakob-owens-O_bhy3TnSYU-unsplash.jpg" alt="">
+                                    <div class="nav-cart-class-product-img-litle">
+                                        <h2>Green Canvas Pack</h2>
+                                        <p>$ 125.00 USD</p>
+                                    </div>
+                                </div>
+                                <div class="nav-cart-btn-price">
+                                    <a href="#">Remove</a>
+                                </div>
+                            </div>
+                            <div class="nav-cart-class-product-price">
+                                <input type="number">
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                    <div class="nav-cart-class-product">
+                        <div class="nav-cart-class-product-con">
+                            <div class="nav-cart-class-product-img">
+                                <div class="nav-cart-class-product-img-con">
+                                    <img src="https://uploads-ssl.webflow.com/5e853c3383474026e43f2c78/5e8542198347409e463f436b_jakob-owens-O_bhy3TnSYU-unsplash.jpg" alt="">
+                                    <div class="nav-cart-class-product-img-litle">
+                                        <h2>Green Canvas Pack</h2>
+                                        <p>$ 125.00 USD</p>
+                                    </div>
+                                </div>
+                                <div class="nav-cart-btn-price">
+                                    <a href="#">Remove</a>
+                                </div>
+                            </div>
+                            <div class="nav-cart-class-product-price">
+                                <input type="number">
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                    <div class="nav-cart-class-product">
+                        <div class="nav-cart-class-product-con">
+                            <div class="nav-cart-class-product-img">
+                                <div class="nav-cart-class-product-img-con">
+                                    <img src="https://uploads-ssl.webflow.com/5e853c3383474026e43f2c78/5e8542198347409e463f436b_jakob-owens-O_bhy3TnSYU-unsplash.jpg" alt="">
+                                    <div class="nav-cart-class-product-img-litle">
+                                        <h2>Green Canvas Pack</h2>
+                                        <p>$ 125.00 USD</p>
+                                    </div>
+                                </div>
+                                <div class="nav-cart-btn-price">
+                                    <a href="#">Remove</a>
+                                </div>
+                            </div>
+                            <div class="nav-cart-class-product-price">
+                                <input type="number">
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+
+                
+
+                <div class="nav-cart-footer-button">
+                    <div class="nav-cart-footer-button-con">
+                        <div class="nav-cart-footer-button-con-in">
+                            <div class="nav-cart-subtotal">
+                                <p>
+                                    Subtotal
+                                </p>
+                            </div>
+                            <div class="nav-cart-total">
+                                <p>$ 325.00 USD</p>
+                            </div>
+                        </div>
+                        <div class="nav-cart-total-price">
+                            <a href="#">Continue to Checkout</a>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+
+
+
+        <div class="container">
+            <div class="con-logo">
+                <div class="con-left">
+                    <img src="https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e7ff57adad44d1f072965b6_logo.svg" alt="">
+                </div>
+                
+                <div class="menu">
+                    <div id="menuList" class="menu-bg"></div>
+                    <div id="menuListCon" class="menu-top">
+                        <div class="menu-con">
+                            <a class="info-con" href="index.html">Home</a>
+                        </div>
+                        <div class="menu-con">
+                            <a class="info-con" href="about.html">About</a>
+                        </div>
+                        <div class="menu-con">
+                            <a class="info-con" href="Shop.html">Shop</a>
+                        </div>
+                        <div class="menu-con">
+                            <a class="info-con" href="Donate.html">Donate</a>
+                        </div>
+                        <div class="menu-con">
+                            <a class="info-con" href="Contact.html">Contact</a>
+                        </div>
+                    </div>
+                    
+
+                    <!--     id="OpenCartPrice"       -->
+
+                    <div onclick="OpenCart()" id="OpenCartPrice" class="imgs">
+
+                        <p id="price">0</p>
+                        
+                        <img src="https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e86146bb854797d12a30a13_cart.svg" alt="">
+                    </div>
+
+                    <div class="menu-icon-nav-open"  >
+                        <i class="fa-solid fa-bars" id="menuOpen" onclick="toddleMenu()" ></i>
+                    </div>
+
+                    <div class="menu-icon-nav-close" id="menuBgClose" >
+                        <i class="fa-solid fa-bars" id="menuClose"></i>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="shop-product">
+        <div class="container">
+            <div class="shop-product-con">
+                <h1>Shop Our Products</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="featured-item">
+        <div class="container">
+            <div class="featured-item-con">
+                <div class="featured-item-con-item">
+                    <div class="white-tent">
+                        <h2>White Tent</h2>
+                        <p>$ 200.00 USD</p>
+                    </div>
+                    <div class="featured-item-right">
+                        <a href="#">Featured Item</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="shop-by-category">
+        <div class="container">
+            <div class="shop-by-category-con">
+
+                <div class="shop-by-category-left">
+                    <h2>
+                        Shop by Category
+                    </h2>
+                    <div class="shop-by-category-menu-item">
+                        <a href="#">Gift Cards</a>
+                        <a href="#">Tents</a>
+                        <a href="#">Accessories</a>
+                        <a href="#">Packs</a>
+                    </div>
+                </div>
+
+                <div class="shop-by-category-right">
+
+                    <div class="shop-by-category-info">
+                        <div class="shop-by-category-info-top">
+                            <img src="https://assets.website-files.com/5e853c3383474026e43f2c78/5e861d123df4d175e80e8beb_acme-gift-card.jpg" alt="">
+                        </div>
+                        <div class="shop-by-category-title">
+                            <div class="shop-by-category-title-info">
+                                <p>Gift Card</p>
+                                <p>$ 25.00 USD</p>
+                                <div class="shop-by-category-btn">
+                                    <a href="./product-Gift-Card.html">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="shop-by-category-info">
+                        <div class="shop-by-category-info-top">
+                            <img src="https://assets.website-files.com/5e853c3383474026e43f2c78/5e8542c1248e59128e08e3e9_ryan-holloway-JyDmUaXMib4-unsplash.jpg" alt="">
+                        </div>
+                        <div class="shop-by-category-title">
+                            <div class="shop-by-category-title-info">
+                                <p>Tin Coffee Tumbler</p>
+                                <p>$ 35.00 USD</p>
+                                <div class="shop-by-category-btn">
+                                    <a href="./product-Tin-Coffee-Tumbler.html">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="shop-by-category-info">
+                        <div class="shop-by-category-info-top">
+                            <img src="https://assets.website-files.com/5e853c3383474026e43f2c78/5e85425605cae11f20d46181_denisse-leon-J7CjWufjmg4-unsplash.jpg" alt="">
+                        </div>
+
+                        <div class="shop-by-sale">
+                            <p>SALE</p>
+                        </div>
+
+                        <div class="shop-by-category-title">
+                            <div class="shop-by-category-title-info">
+                                <p>Blue Canvas Pack</p>
+                                <p>$ 95.00 USD</p>
+                                <div class="shop-by-category-btn">
+                                    <a href="./product-Blue-Canvas-Pack.html">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shop-by-category-info">
+                        <div class="shop-by-category-info-top">
+                            <img src="https://assets.website-files.com/5e853c3383474026e43f2c78/5e8542198347409e463f436b_jakob-owens-O_bhy3TnSYU-unsplash.jpg" alt="">
+                        </div>
+                        <div class="shop-by-category-title">
+                            <div class="shop-by-category-title-info">
+                                <p>Green Canvas Pack</p>
+                                <p>$ 125.00 USD</p>
+                                <div class="shop-by-category-btn">
+                                    <a href="./product-Green-Canvas-Pack.html">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="footer-con">
+
+                <div class="footer-logo btn-footer">
+                    <a href="./index.html">
+                        <img src="https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e7ff57adad44d1f072965b6_logo.svg" alt="">
+                    </a>
+                </div>
+                <div class="footer-icon btn-footer">
+                    <img src="https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e8407a25b6234aeec960fb9_Twitter_Social_Icon_Rounded_Square_White.svg" alt="">
+                    <img src="https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e8407aa3fb6cf5576f1658b_Facebook%20Logo.svg" alt="">
+                    <img src="https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e840774014326b74bbeeeb6_Insta.svg" alt="">
+                </div>
+                
+            </div>
+
+            <div class="footer-end">
+                <p>
+                    Made In
+                </p>
+                <a href="#">Webflow.</a>
+                <p>© 2020.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="java.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,407 @@
+
+
+/****************************  768px  *************************/
+
+@media only screen and (max-width: 768px) {
+
+    .Awaits {
+
+        .Awaits-con {
+            padding: 20px;
+
+
+            .Awaits-title {
+
+                p {
+                    width: 55%;
+                }
+            }
+        }
+    }
+
+    /****************************  OUTDOORS  *************************/
+
+    .OUTDOORS {
+
+        .container {
+
+            .OUTDOORS-con {
+
+                .OUTDOORS-con-top {
+                    padding: 20px;
+    
+                    p {
+                        font-size: 16px;
+                    }
+    
+    
+                    .OUTDOORS-title {
+                        margin-top: 10px;
+    
+                    } 
+                }
+            }
+        }
+
+
+        /****************************  grid  *************************/
+
+        .outdoors-con-info {
+            padding: 20px;
+
+        
+        }
+    }
+
+    /****************************  Meet-about  *************************/
+
+    .Meet-about {
+
+        .container {
+
+            .Meet-about-total-con {
+                padding: 20px;
+
+                .Meet-about-right {
+
+                    img {
+                        height: 980px;
+                        object-fit: cover;
+                    }
+                }
+
+                .Meet-about-con {
+
+                    .Meet-about-con-left {
+                        margin-left: 30%;
+                    }
+                }
+            }
+        }
+    }
+
+
+    /****************************  profrile  *************************/
+
+    .profrile {
+
+        .container {
+
+            .profrile-con {
+                padding: 20px;
+
+            }
+        }
+    }
+
+
+    /****************************  Need-held  *************************/
+
+
+    .Need-held {
+
+        .container {
+
+            .Need-held-con {
+
+                .Need-held-con-footer {
+                    padding: 20px;
+                }
+            }
+
+        }
+    }
+
+}
+
+
+/****************************  900px  *************************/
+
+@media only screen and (max-width: 900px) {
+
+    .Awaits {
+
+        .Awaits-con {
+            padding: 20px;
+
+
+            .Awaits-title {
+
+                p {
+                    width: 55%;
+                }
+            }
+        }
+    }
+
+    /****************************  OUTDOORS  *************************/
+
+    .OUTDOORS {
+
+        .OUTDOORS-con {
+
+            .OUTDOORS-con-top {
+                padding: 20px;
+
+                p {
+                    font-size: 16px;
+                }
+
+
+                .OUTDOORS-title {
+                    margin-top: 10px;
+
+                    p {
+                        padding: 0 200px;
+                    }
+                } 
+            }
+        }
+
+
+        /****************************  grid  *************************/
+
+        .outdoors-con-info {
+            padding: 20px;
+
+        
+        }
+    }
+
+    /****************************  Meet-about  *************************/
+
+    .Meet-about {
+
+        .container {
+
+            .Meet-about-total-con {
+                padding: 20px;
+
+                .Meet-about-right {
+
+                    img {
+                        min-height: 980px;
+                        object-fit: cover;
+                    }
+                }
+
+                .Meet-about-con {
+
+                    .Meet-about-con-left {
+                        margin-left: 30%;
+                    }
+                }
+            }
+        }
+    }
+
+
+    /****************************  profrile  *************************/
+
+    .profrile {
+
+        .container {
+
+            .profrile-con {
+                padding: 20px;
+
+            }
+        }
+    }
+
+
+    /****************************  Need-held  *************************/
+
+
+    .Need-held {
+
+        .container {
+
+            .Need-held-con {
+
+                .Need-held-con-footer {
+                    padding: 20px;
+                }
+            }
+
+        }
+    }
+
+}
+
+/****************************  480px  *************************/
+
+@media only screen and (max-width: 480px) {
+
+    .Awaits {
+
+        .container {
+
+            .Awaits-con {
+                padding: 20px;
+                margin-top: 3.5rem;
+    
+                & h4 {
+                    font-size: 38px;
+                }
+    
+                .Awaits-title {
+    
+                    p {
+                        width: 70%;
+                    }
+                }
+            }
+
+        }
+    }
+
+    /****************************  OUTDOORS  *************************/
+
+    .OUTDOORS {
+
+        .container {
+
+            .OUTDOORS-con {
+
+                .OUTDOORS-con-top {
+    
+    
+                    .OUTDOORS-title {
+                        margin-top: 10px;
+    
+                        p {
+                            padding: 0 0;
+                        }
+                    } 
+                }
+            }
+        }
+
+
+        /****************************  grid  *************************/
+
+        .outdoors-con-info {
+            grid-template-columns: repeat(1, 1fr);
+            text-align: center;
+            
+            .outdoors-items {
+
+                img {
+                    width: 60px;
+                }
+
+                h1 {
+                    font-size: 28px;
+                }
+
+                .outdoors-title-button {
+
+                    p {
+                        padding: 0 35px;
+                        font-size: 18px;
+                        font-weight: 500;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+    }
+
+    /****************************  Meet-about  *************************/
+
+    .Meet-about {
+        margin-top: 80px;
+
+        .container {
+
+            
+            .Meet-about-total-con {
+                flex-wrap: wrap;
+                width: 100%;
+                height: 100%;
+                padding: 0 0;
+
+                .Meet-about-right {
+                    position: static;
+                    padding:  0 0;
+                    width: 100%;
+
+                    img {
+                        height: 400px;
+                        width: 100%;
+                        border-radius: 0;
+                    }
+
+                }
+
+                .Meet-about-con {
+                    width: 100%;
+                    border-radius: 0;
+
+                    .Meet-about-con-left {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+
+    /****************************  profrile  *************************/
+
+    .profrile {
+
+        .container {
+
+            .profrile-con {
+                flex-direction: column;
+                padding: 20px;
+
+
+                .profrile-user {
+                    width: 100%;
+
+                    .profrile-title {
+                        width: 100%;
+                        margin-bottom: 40px;
+
+                        p {
+                            padding: 0 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    /****************************  Need-held  *************************/
+
+
+    .Need-held {
+
+        .container {
+
+            .Need-held-con {
+
+                .Need-held-con-footer {
+                    padding: 20px;
+                    margin-top: 100px;
+
+                    h4 {
+                        font-size: 35px;
+                    }
+
+                    .Need-held-con-title {
+
+                        p {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
