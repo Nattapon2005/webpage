@@ -1,0 +1,132 @@
+
+
+
+/****************************  900px  *************************/
+
+@media only screen and (max-width: 900px) {
+
+    /****************************  donate  *************************/
+
+    .donate {
+
+        .container {
+
+            .donate-con {
+
+                .donate-con-info {
+
+                    p {
+                        padding: 0 140px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+
+     /****************************  donate  *************************/
+
+
+     .donate-menu {
+
+        .container {
+
+            .donate-menu-con {
+                padding: 20px;
+            }
+        }
+     }
+
+
+}
+
+
+/****************************  768px  *************************/
+
+@media only screen and (max-width: 768px) {
+
+    /****************************  donate  *************************/
+
+    .donate {
+
+        .container {
+
+            .donate-con {
+
+                .donate-con-info {
+
+                    p {
+                        padding: 0 90px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+
+     /****************************  donate  *************************/
+
+
+     .donate-menu {
+
+        .container {
+
+            .donate-menu-con {
+                padding: 20px;
+            }
+        }
+     }
+
+
+}
+
+
+/****************************  480px  *************************/
+
+@media only screen and (max-width: 480px) {
+
+    /****************************  donate  *************************/
+
+    .donate {
+
+        .container {
+
+            .donate-con {
+
+                .donate-con-info {
+
+                    h1 {
+                        font-size: 33px;
+                    }
+
+                    p {
+                        padding: 0 40px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+
+     /****************************  donate  *************************/
+
+
+     .donate-menu {
+
+        .container {
+
+            .donate-menu-con {
+                padding: 20px;
+
+                .donate-menu-choice {
+                    width: 100%;
+                }
+            }
+        }
+     }
+
+
+}

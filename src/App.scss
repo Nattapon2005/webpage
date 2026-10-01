@@ -1,0 +1,20 @@
+// Import global variables and fonts
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+// Import all our converted SCSS files
+@import './styles/style.scss';
+@import './styles/Navbar.scss';
+@import './styles/Responsive.scss';
+@import './styles/footer.scss';
+
+// Import page specific styles
+@import './styles/adout.scss';
+@import './styles/shoping.scss';
+@import './styles/Donate.scss';
+@import './styles/Contact.scss';
+
+// Add any missing global overrides here
+body {
+    margin: 0;
+    padding: 0;
+}

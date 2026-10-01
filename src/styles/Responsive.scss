@@ -1,0 +1,645 @@
+
+/**************************** max-width: 480px  *******************************/
+
+@media only screen and (max-width: 480px) {
+
+
+    /*************************** header ***********************************/
+
+    header {
+
+
+        .container {
+
+            .Serving-con {
+                padding: 20px;
+                margin-top: 5rem;
+
+                .Serving-header-con {
+
+                    h4 {
+                        font-size: 38px;
+                    }
+
+                    .Serving-btn {
+
+                        p {
+                            width: 55%;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+
+/*************************** Support-Acme-Outdoors ***********************************/
+
+.Support-Acme-Outdoors {
+    padding: 4rem 0;
+
+        & .Support-con {
+            display: flex;
+            flex-direction: column;
+            padding: 0 20px;
+
+            & .Support {
+                width: 100%;
+
+                & h4 {
+                    font-weight: 600;
+                    color: #222;
+                    margin-bottom: 20px;
+                }
+            }
+
+            & .covid-19 {
+                width: 85%;
+
+                & p:nth-child(2) , p:nth-child(3)  {
+                    margin-top: 0;
+                }
+
+                & p:nth-child(1) , p:nth-child(2) , p:nth-child(3) {
+                    width: 100%;
+                    padding: 0 0;
+                    line-height: 20px;
+                }
+            }
+        }
+
+
+        & .Support-info {
+            display: flex;
+            flex-direction: column;
+            padding: 0 20px;
+            margin-bottom: 6rem;
+
+            & .Outdoors {
+                width: 100%;
+
+                & .Outdoors-con {
+                    width: 100%;
+                    height: 400px;
+
+                    & .Outdoors-number {
+
+                        & h1 {
+                            font-size: 38px;
+                        }
+                    }
+
+                    & .Outdoors-con-logo {
+
+                        & h1 {
+                            font-size: 38px;
+                        }
+                    }
+                }
+
+                & .Outdoors-title {
+                    margin-top: 3rem;
+                    margin-bottom: 70px;
+    
+                    & p {
+                        margin-top: 0.5rem;
+                        color: rgba(15, 15, 15, 0.533);
+                    }
+                }
+            }
+        }
+    }
+
+
+    & .keeping {
+
+        & .keeping-con-info {
+            padding: 0 20px;
+            margin-top: 135px;
+
+            & .keeping-con {
+
+                & h1 {
+                    font-size: 30px;
+                }
+
+                & .keeping-title {
+
+                    margin-top: 10px ;
+
+                   & p {
+
+                    width: 280px;
+                    margin-left: auto;
+                    font-size: 14px;
+                    line-height: 20px;
+                   }
+
+                    & .keeping-btn {
+
+                        & a {
+                            font-size: 15px;
+                            font-weight: 700;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+
+    /*************************** Open ***********************************/
+
+    & .Open {
+
+        & .Open-con {
+            padding: 0 20px;
+
+            & .Open-info-con-sells {
+                display: flex;
+                flex-direction: column;
+
+                & .Open-info {
+                    margin: 20px 0;
+                }
+            }
+        }
+    }
+
+
+    /*************************** Local ***********************************/
+
+    & .Local {
+        padding: 0 0 0 0;
+
+        .container {
+
+            & .Local-con {
+                width: 100%;
+                padding: 0 0;
+                
+                /*
+                ถ้ากำหนด position: static; คำสั่งที่ใช้ในการกำหนดตำแหน่งแบบเจาะจง 
+                เช่น top, bottom, left, right จะไม่มีผลอะไรเลย
+                */
+                flex-wrap: wrap;
+    
+                & .Local-imgs {
+                    padding: 0 0;
+                       /*
+                ถ้ากำหนด position: static; คำสั่งที่ใช้ในการกำหนดตำแหน่งแบบเจาะจง 
+                เช่น top, bottom, left, right จะไม่มีผลอะไรเลย
+                */
+                    position: static;
+                    width: 100%;
+    
+                    & .img {
+                        object-fit: cover;
+                    }
+                }
+    
+                & .Local-title {
+                    width: 100%;
+                    border-radius: 0;
+                    
+                    & .Local-title-p {
+    
+                        & .local-p-margin {
+                            width: -10%;
+    
+                            p {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+/**************************** max-width: 768px  *******************************/
+
+@media only screen and (max-width: 768px) {
+    
+    /*************************** header ***********************************/
+
+    header {
+
+
+        & .Serving-con {
+            height: 100%;
+            padding: 0 20px;
+
+            & .Serving-header-con {
+
+                & h4 {
+                    font-size: 50px;
+                }
+        
+                & .Serving-btn {
+                    width: 550px;
+        
+                    & p {
+                        font-size: 16px;
+                        margin-top: 0;
+                        line-height: 30px;
+                    }
+                }
+        
+                & .Serving-shop {
+                    & .Shop-Merch {
+
+                        padding: 8px 25px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+
+/*************************** Support-Acme-Outdoors ***********************************/
+
+.Support-Acme-Outdoors {
+    padding: 4rem 0;
+
+        & .Support-con {
+            display: flex;
+            flex-direction: column;
+            padding: 0 20px;
+
+            & .Support {
+                width: 100%;
+
+                & h4 {
+                    font-weight: 600;
+                    color: #222;
+                    margin-bottom: 20px;
+                }
+            }
+
+            & .covid-19 {
+                width: 85%;
+
+                & p:nth-child(2) , p:nth-child(3)  {
+                    margin-top: 0;
+                }
+
+                & p:nth-child(1) , p:nth-child(2) , p:nth-child(3) {
+                    width: 100%;
+                    padding: 0 0;
+                    line-height: 20px;
+                }
+            }
+        }
+
+
+        & .Support-info {
+            margin-bottom: 6rem;
+            gap: 20px;
+            padding: 0 20px;
+            width: 100%;
+
+            & .Outdoors {
+                width: 100%;
+                margin-bottom: -40px;
+
+
+                & .Outdoors-con {
+                    width: 100%;
+                    height: 350px;
+
+                    & .Outdoors-number {
+
+                        & h1 {
+                            font-size: 38px;
+                        }
+                    }
+
+                    & .Outdoors-con-logo {
+
+                        & h1 {
+                            font-size: 28px;
+                            line-height: 55px;
+                        }
+                    }
+                }
+
+                & .Outdoors-title {
+                    margin-top: 3rem;
+    
+                    & p {
+                        margin-top: 0.5rem;
+                        color: rgba(15, 15, 15, 0.533);
+                    }
+                }
+            }
+        }
+    }
+
+
+    /*************************** keeping ***********************************/
+
+    & .keeping {
+
+        & .keeping-con-info {
+            padding: 0 20px;
+            margin-top: -40px;
+
+            & .keeping-con {
+
+                & h1 {
+                    font-size: 38px;
+                    line-height: 60px;
+                }
+
+                & .keeping-title {
+
+                    margin-top: 10px ;
+
+                   & p {
+                    width: 280px;
+                    margin-left: auto;
+                    font-size: 16px;
+                    line-height: 20px;
+                   }
+
+                    & .keeping-btn {
+                        margin-top: 10px;
+
+                        & a {
+                            font-size: 15px;
+                            font-weight: 700;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+
+    /*************************** Open ***********************************/
+
+        & .Open {
+
+            & .Open-con {
+                padding: 0 20px;
+    
+                & .Open-info-con-sells {
+                    grid-template-columns: repeat(2, 1fr);
+    
+                    & .Open-info {
+                        margin: 20px 0;
+                    }
+                }
+            }
+        }
+
+
+    /*************************** Local ***********************************/
+
+    & .Local {
+
+        & .Local-con {
+            padding: 10px;
+
+            .Local-imgs {
+                padding: 10px;
+            }
+    
+            & .Local-title {
+                border-radius: 0;
+
+                & .Local-title-p {
+                    width: 100%;
+                    margin-left: 150px;
+
+                    & .local-p-margin {
+                        width: 80%;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/**************************** max-width: 900px  *******************************/
+
+@media only screen and (max-width: 900px) {
+
+
+    /*************************** header ***********************************/
+
+    header {
+
+
+        & .Serving-con {
+            height: 100%;
+            padding: 0 20px;
+
+            & .Serving-header-con {
+
+                & h4 {
+                    font-size: 50px;
+                }
+        
+                & .Serving-btn {
+                    width: 550px;
+        
+                    & p {
+                        font-size: 16px;
+                        margin-top: 0;
+                        line-height: 30px;
+                    }
+                }
+        
+                & .Serving-shop {
+                    & .Shop-Merch {
+
+                        padding: 8px 25px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+
+/*************************** Support-Acme-Outdoors ***********************************/
+
+.Support-Acme-Outdoors {
+    padding: 4rem 0;
+
+        & .Support-con {
+            display: flex;
+            flex-direction: column;
+            padding: 0 20px;
+
+            & .Support {
+                width: 100%;
+
+                & h4 {
+                    font-weight: 600;
+                    color: #222;
+                    margin-bottom: 20px;
+                }
+            }
+
+            & .covid-19 {
+                width: 85%;
+
+                & p:nth-child(2) , p:nth-child(3)  {
+                    margin-top: 0;
+                }
+
+                & p:nth-child(1) , p:nth-child(2) , p:nth-child(3) {
+                    width: 100%;
+                    padding: 0 0;
+                    line-height: 20px;
+                }
+            }
+        }
+
+
+        & .Support-info {
+            margin-bottom: 6rem;
+            gap: 20px;
+            padding: 0 20px;
+            width: 100%;
+
+            & .Outdoors {
+                width: 100%;
+                margin-bottom: -40px;
+
+
+                & .Outdoors-con {
+                    width: 100%;
+                    height: 350px;
+
+                    & .Outdoors-number {
+
+                        & h1 {
+                            font-size: 38px;
+                        }
+                    }
+
+                    & .Outdoors-con-logo {
+
+                        & h1 {
+                            font-size: 28px;
+                            line-height: 55px;
+                        }
+                    }
+                }
+
+                & .Outdoors-title {
+                    margin-top: 3rem;
+    
+                    & p {
+                        margin-top: 0.5rem;
+                        color: rgba(15, 15, 15, 0.533);
+                    }
+                }
+            }
+        }
+    }
+
+
+    /*************************** keeping ***********************************/
+
+    & .keeping {
+
+        & .keeping-con-info {
+            padding: 0 20px;
+            margin-top: -40px;
+
+            & .keeping-con {
+
+                & h1 {
+                    font-size: 38px;
+                    line-height: 60px;
+                }
+
+                & .keeping-title {
+
+                    margin-top: 10px ;
+
+                   & p {
+                    width: 280px;
+                    margin-left: auto;
+                    font-size: 16px;
+                    line-height: 20px;
+                   }
+
+                    & .keeping-btn {
+                        margin-top: 10px;
+
+                        & a {
+                            font-size: 15px;
+                            font-weight: 700;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+
+    /*************************** Open ***********************************/
+
+        & .Open {
+
+            & .Open-con {
+                padding: 0 20px;
+    
+                & .Open-info-con-sells {
+                    grid-template-columns: repeat(2, 1fr);
+    
+                    & .Open-info {
+                        margin: 20px 0;
+                    }
+                }
+            }
+        }
+
+
+    /*************************** Local ***********************************/
+
+    & .Local {
+
+        & .Local-con {
+            padding: 10px;
+
+            .Local-imgs {
+                padding: 10px;
+            }
+    
+            & .Local-title {
+
+                & .Local-title-p {
+                    width: 100%;
+                    margin-left: 150px;
+
+                    & .local-p-margin {
+                        width: 80%;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+

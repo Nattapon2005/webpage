@@ -1,0 +1,171 @@
+/* Global Animations and Effects */
+
+/* Image Zoom on Hover */
+.Open-info-top, 
+.shop-by-category-info-top, 
+.product-white-tent-img, 
+.Local-imgs {
+    overflow: hidden;
+    position: relative;
+}
+
+.Open-info-top img, 
+.shop-by-category-info-top img, 
+.product-white-tent-img img, 
+.Local-imgs img {
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* When hovering over the parent container, zoom the image */
+.Open-info:hover .Open-info-top img, 
+.shop-by-category-info:hover .shop-by-category-info-top img, 
+.product-white-tent-con:hover .product-white-tent-img img, 
+.Local-con:hover .Local-imgs img {
+    transform: scale(1.1);
+}
+
+/* Floating Animation for Hero Images / Specific Items */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+.white-tent, .Local-imgs img {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Smooth Buttons */
+.Shop-Merch, 
+.open-btn a, 
+.shop-by-category-btn a, 
+.open-end a, 
+.keeping-btn a,
+.product-data-submit {
+    transition: all 0.3s ease-in-out !important;
+}
+
+.Shop-Merch:hover, 
+.open-btn a:hover, 
+.shop-by-category-btn a:hover, 
+.open-end a:hover, 
+.keeping-btn a:hover,
+.product-data-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(235, 87, 87, 0.3);
+}
+
+/* Fade in up animation for text elements on load */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.Serving-header-con h4, 
+.home-con h1, 
+.Support h4, 
+.keeping-con h1, 
+.Local-title h2 {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.Serving-btn, 
+.covid-19 p, 
+.keeping-title p, 
+.Local-title-p p {
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+}
+
+/* High-tech Mobile Menu */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 100000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-menu-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #eb5757;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu-close:hover {
+    transform: rotate(90deg);
+    color: #fff;
+}
+
+.mobile-menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+
+.mobile-link {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.mobile-link:hover {
+    color: #eb5757;
+    text-shadow: 0 0 15px rgba(235, 87, 87, 0.6);
+    transform: scale(1.1);
+}
+
+.mobile-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #eb5757;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px #eb5757;
+}
+
+.mobile-link:hover::after {
+    width: 100%;
+}
+
+@media (min-width: 900px) {
+    .menu-icon-nav-open {
+        display: none !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .desktop-menu-only {
+        display: none !important;
+    }
+}
