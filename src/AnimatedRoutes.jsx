@@ -8,6 +8,7 @@ import Shop from './pages/Shop';
 import Donate from './pages/Donate';
 import Contact from './pages/Contact';
 import ProductDetail from './pages/ProductDetail';
+import Responding from './pages/Responding';
 import PageTransition from './components/PageTransition';
 
 const AnimatedRoutes = () => {
@@ -21,6 +22,7 @@ const AnimatedRoutes = () => {
                 <Route path="/shop" element={<PageTransition><Shop /></PageTransition>} />
                 <Route path="/donate" element={<PageTransition><Donate /></PageTransition>} />
                 <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
+                <Route path="/responding" element={<PageTransition><Responding /></PageTransition>} />
                 <Route path="/product/:id" element={<PageTransition><ProductDetail /></PageTransition>} />
             </Routes>
         </AnimatePresence>

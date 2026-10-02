@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Home = () => {
     return (
@@ -7,22 +8,37 @@ const Home = () => {
             <header>
                 <div className="container">
                     <div className="Serving-con">
-                        <div className="Serving-header-con">
+                        <motion.div 
+                            className="Serving-header-con"
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, ease: "easeOut" }}
+                        >
                             <h4>
                                 Serving you <br />
                                 since 1989.
                             </h4>
-                            <div className="Serving-btn">
+                            <motion.div 
+                                className="Serving-btn"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 0.8, delay: 0.4 }}
+                            >
                                 <p>
                                     Acme Outdoors is an outdoor and adventure
                                     shop located in the Boathouse District in
                                     Oklahoma City.
                                 </p>
-                            </div>
-                            <div className="Serving-shop">
+                            </motion.div>
+                            <motion.div 
+                                className="Serving-shop"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 0.8, delay: 0.6 }}
+                            >
                                 <Link className="Shop-Merch" to="/shop">Shop Merch</Link>
-                            </div>
-                        </div>
+                            </motion.div>
+                        </motion.div>
                     </div>
                 </div>
             </header>
@@ -30,20 +46,38 @@ const Home = () => {
             <div className="Support-Acme-Outdoors">
                 <div className="container">
                     <div className="Support-con">
-                        <div className="Support">
+                        <motion.div 
+                            className="Support"
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ duration: 0.6 }}
+                        >
                             <p>WAYS TO SUPPORT</p>
                             <h4>Support Acme Outdoors.</h4>
-                        </div>
-                        <div className="covid-19">
+                        </motion.div>
+                        <motion.div 
+                            className="covid-19"
+                            initial={{ opacity: 0, x: 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ duration: 0.6 }}
+                        >
                             <p>
                                 COVID-19 has forced us to close our retail space, but we need support from patrons like yourself
                                 now more than ever. Below, we’ve listed the best ways to help us through this season.
                             </p>
-                        </div>
+                        </motion.div>
                     </div>
 
                     <div className="Support-info">
-                        <div className="Outdoors">
+                        <motion.div 
+                            className="Outdoors"
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.5, delay: 0.1 }}
+                        >
                             <div className="Outdoors-con">
                                 <div className="Outdoors-number">
                                     <h1>01</h1>
@@ -61,9 +95,15 @@ const Home = () => {
                                     is still something you can do. Get your gear now!
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div className="Outdoors">
+                        <motion.div 
+                            className="Outdoors"
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.5, delay: 0.3 }}
+                        >
                             <div className="Outdoors-con">
                                 <div className="Outdoors-number">
                                     <h1>02</h1>
@@ -80,9 +120,15 @@ const Home = () => {
                                     our staff is working. Donate to keep them afloat.
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div className="Outdoors">
+                        <motion.div 
+                            className="Outdoors"
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.5, delay: 0.5 }}
+                        >
                             <div className="Outdoors-con">
                                 <div className="Outdoors-number">
                                     <h1>03</h1>
@@ -100,7 +146,7 @@ const Home = () => {
                                     with friends and family.
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>
@@ -108,7 +154,13 @@ const Home = () => {
             <div className="keeping">
                 <div className="container">
                     <div className="keeping-con-info">
-                        <div className="keeping-con">
+                        <motion.div 
+                            className="keeping-con"
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ duration: 0.6 }}
+                        >
                             <h1>
                                 How we're keeping you <br />
                                 safe during COVID-19
@@ -124,7 +176,7 @@ const Home = () => {
                                     </Link>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>
@@ -132,10 +184,22 @@ const Home = () => {
             <div className="Open">
                 <div className="container">
                     <div className="Open-con">
-                        <p>SHOP PRODUCTS</p>
-                        <h2>Open 24/7/365.</h2>
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                        >
+                            <p>SHOP PRODUCTS</p>
+                            <h2>Open 24/7/365.</h2>
+                        </motion.div>
                         <div className="Open-info-con-sells">
-                            <div className="Open-info">
+                            <motion.div 
+                                className="Open-info"
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 0.5, delay: 0.1 }}
+                            >
                                 <div className="Open-info-top">
                                     <img src="https://assets.website-files.com/5e853c3383474026e43f2c78/5e856e41c718420c18dd6751_patrick-hendry-eDgUyGu93Yw-unsplash.jpg" alt="" />
                                 </div>
@@ -148,9 +212,15 @@ const Home = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
 
-                            <div className="Open-info">
+                            <motion.div 
+                                className="Open-info"
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 0.5, delay: 0.3 }}
+                            >
                                 <div className="Open-info-top">
                                     <img src="https://assets.website-files.com/5e853c3383474026e43f2c78/5e8542c1248e59128e08e3e9_ryan-holloway-JyDmUaXMib4-unsplash.jpg" alt="" />
                                 </div>
@@ -163,9 +233,15 @@ const Home = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
 
-                            <div className="Open-info">
+                            <motion.div 
+                                className="Open-info"
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 0.5, delay: 0.5 }}
+                            >
                                 <div className="Open-info-top">
                                     <img src="https://assets.website-files.com/5e853c3383474026e43f2c78/5e85425605cae11f20d46181_denisse-leon-J7CjWufjmg4-unsplash.jpg" alt="" />
                                 </div>
@@ -181,12 +257,18 @@ const Home = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
 
-                        <div className="open-end">
+                        <motion.div 
+                            className="open-end"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.4, delay: 0.6 }}
+                        >
                             <Link to="/shop">View All product</Link>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>
@@ -194,10 +276,22 @@ const Home = () => {
             <div className="Local">
                 <div className="container">
                     <div className="Local-con">
-                        <div className="Local-imgs">
+                        <motion.div 
+                            className="Local-imgs"
+                            initial={{ opacity: 0, x: -80 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ duration: 0.8, ease: "easeOut" }}
+                        >
                             <img src="https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e83fe3910db4fde2e69f396_christiann-koepke-dQyS2pMYtok-unsplash%20(1).jpg" alt="" />
-                        </div>
-                        <div className="Local-title">
+                        </motion.div>
+                        <motion.div 
+                            className="Local-title"
+                            initial={{ opacity: 0, x: 80 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ duration: 0.8, ease: "easeOut" }}
+                        >
                             <div className="Local-title-p">
                                 <h2>Shop Local.</h2>
                                 <div className="local-p-margin">
@@ -222,7 +316,7 @@ const Home = () => {
                                     <p>Acme Outdoors</p>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>

@@ -27,6 +27,21 @@
     transform: scale(1.1);
 }
 
+/* Product Card Hover Effect */
+.Open-info, 
+.shop-by-category-info,
+.product-white-tent-con {
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-radius: 8px; /* For a smooth shadow edge */
+}
+
+.Open-info:hover, 
+.shop-by-category-info:hover,
+.product-white-tent-con:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
 /* Floating Animation for Hero Images / Specific Items */
 @keyframes float {
     0% { transform: translateY(0px); }

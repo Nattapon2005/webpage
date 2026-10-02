@@ -129,8 +129,7 @@
                     margin-top: 10px ;
 
                    & p {
-
-                    width: 280px;
+                    width: 100%;
                     margin-left: auto;
                     font-size: 14px;
                     line-height: 20px;
@@ -172,43 +171,32 @@
     /*************************** Local ***********************************/
 
     & .Local {
-        padding: 0 0 0 0;
+        padding: 0;
 
         .container {
-
             & .Local-con {
                 width: 100%;
-                padding: 0 0;
-                
-                /*
-                ถ้ากำหนด position: static; คำสั่งที่ใช้ในการกำหนดตำแหน่งแบบเจาะจง 
-                เช่น top, bottom, left, right จะไม่มีผลอะไรเลย
-                */
-                flex-wrap: wrap;
+                padding: 0;
+                flex-direction: column;
     
                 & .Local-imgs {
-                    padding: 0 0;
-                       /*
-                ถ้ากำหนด position: static; คำสั่งที่ใช้ในการกำหนดตำแหน่งแบบเจาะจง 
-                เช่น top, bottom, left, right จะไม่มีผลอะไรเลย
-                */
+                    padding: 0;
                     position: static;
                     width: 100%;
-    
-                    & .img {
-                        object-fit: cover;
-                    }
+                    min-height: 250px;
                 }
     
                 & .Local-title {
                     width: 100%;
                     border-radius: 0;
+                    padding: 2rem 20px;
                     
                     & .Local-title-p {
+                        margin-left: 0;
+                        width: 100%;
     
                         & .local-p-margin {
-                            width: -10%;
-    
+                            width: 100%;
                             p {
                                 width: 100%;
                             }
@@ -363,7 +351,7 @@
                     margin-top: 10px ;
 
                    & p {
-                    width: 280px;
+                    width: 100%;
                     margin-left: auto;
                     font-size: 16px;
                     line-height: 20px;
@@ -405,24 +393,33 @@
     /*************************** Local ***********************************/
 
     & .Local {
+        padding: 2rem 0;
 
         & .Local-con {
-            padding: 10px;
+            padding: 20px;
+            flex-direction: column;
+            align-items: center;
 
             .Local-imgs {
-                padding: 10px;
+                position: static;
+                width: 100%;
+                min-height: 350px;
+                padding: 0;
+                margin-bottom: 20px;
             }
     
             & .Local-title {
-                border-radius: 0;
+                width: 100%;
+                border-radius: 5px;
+                padding: 2rem;
 
                 & .Local-title-p {
                     width: 100%;
-                    margin-left: 150px;
+                    margin-left: 0;
 
                     & .local-p-margin {
-                        width: 80%;
-
+                        width: 100%;
+                        margin-top: 10px;
                     }
                 }
             }
@@ -617,22 +614,32 @@
     /*************************** Local ***********************************/
 
     & .Local {
+        padding: 2rem 0;
 
         & .Local-con {
-            padding: 10px;
+            padding: 20px;
+            flex-direction: column;
+            align-items: center;
 
             .Local-imgs {
-                padding: 10px;
+                position: static;
+                width: 100%;
+                min-height: 350px;
+                padding: 0;
+                margin-bottom: 20px;
             }
     
             & .Local-title {
+                width: 100%;
+                border-radius: 5px;
+                padding: 2rem;
 
                 & .Local-title-p {
                     width: 100%;
-                    margin-left: 150px;
+                    margin-left: 0;
 
                     & .local-p-margin {
-                        width: 80%;
+                        width: 100%;
                         margin-top: 10px;
                     }
                 }
