@@ -35,19 +35,52 @@ export const CartProvider = ({ children }) => {
     };
 
     const updateQuantity = (productId, quantity) => {
-        if (quantity < 1) return;
+        const parsed = parseInt(quantity, 10);
+        if (isNaN(parsed) || parsed < 1) return;
         setCartItems(prevItems =>
             prevItems.map(item =>
-                item.id === productId ? { ...item, quantity: parseInt(quantity) } : item
+                item.id === productId ? { ...item, quantity: parsed } : item
             )
         );
+    };
+
+    const increaseQuantity = (productId) => {
+        setCartItems(prevItems =>
+            prevItems.map(item =>
+                item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
+            )
+        );
+    };
+
+    const decreaseQuantity = (productId) => {
+        setCartItems(prevItems =>
+            prevItems
+                .map(item =>
+                    item.id === productId ? { ...item, quantity: item.quantity - 1 } : item
+                )
+                .filter(item => item.quantity > 0)
+        );
+    };
+
+    const clearCart = () => {
+        setCartItems([]);
     };
 
     const cartTotal = cartItems.reduce((total, item) => total + (item.priceValue * item.quantity), 0);
     const cartCount = cartItems.reduce((count, item) => count + item.quantity, 0);
 
     return (
-        <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, updateQuantity, cartTotal, cartCount }}>
+        <CartContext.Provider value={{ 
+            cartItems, 
+            addToCart, 
+            removeFromCart, 
+            updateQuantity, 
+            increaseQuantity, 
+            decreaseQuantity, 
+            clearCart, 
+            cartTotal, 
+            cartCount 
+        }}>
             {children}
         </CartContext.Provider>
     );

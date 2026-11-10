@@ -1,5 +1,10 @@
 /* Global Animations and Effects */
 
+html {
+    scrollbar-gutter: stable;
+    overflow-y: scroll;
+}
+
 /* Image Zoom on Hover */
 .Open-info-top, 
 .shop-by-category-info-top, 
@@ -154,6 +159,15 @@
     color: #eb5757;
     text-shadow: 0 0 15px rgba(235, 87, 87, 0.6);
     transform: scale(1.1);
+}
+
+.mobile-link.active {
+    color: #eb5757;
+    text-shadow: 0 0 20px rgba(235, 87, 87, 0.8);
+
+    &::after {
+        width: 60%;
+    }
 }
 
 .mobile-link::after {

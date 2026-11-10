@@ -82,8 +82,9 @@ const ProductDetail = () => {
     }
 
     const handleAddToCart = () => {
-        addToCart(product, quantity);
-        toast.success(`Added ${quantity} of ${product.title} to cart`, {
+        const qty = Math.max(1, parseInt(quantity, 10) || 1);
+        addToCart(product, qty);
+        toast.success(`Added ${qty} × ${product.title} to cart`, {
             icon: '🛒'
         });
     };
@@ -136,13 +137,49 @@ const ProductDetail = () => {
                                 <p>{product.price}</p>
                                 <p>Quantity</p>
                                 <div className="product-data-button">
-                                    <input 
-                                        className="product-data-numder" 
-                                        type="number" 
-                                        min="1" 
-                                        value={quantity} 
-                                        onChange={(e) => setQuantity(e.target.value)}
-                                    />
+                                    <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                                        <button 
+                                            type="button" 
+                                            onClick={() => setQuantity(prev => Math.max(1, (parseInt(prev, 10) || 1) - 1))}
+                                            style={{
+                                                width: '36px',
+                                                height: '40px',
+                                                background: '#222',
+                                                color: '#fff',
+                                                border: '1px solid #444',
+                                                borderRadius: '5px',
+                                                cursor: 'pointer',
+                                                fontSize: '18px',
+                                                fontWeight: 'bold'
+                                            }}
+                                        >
+                                            −
+                                        </button>
+                                        <input 
+                                            className="product-data-numder" 
+                                            type="number" 
+                                            min="1" 
+                                            value={quantity} 
+                                            onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value, 10) || 1))}
+                                        />
+                                        <button 
+                                            type="button" 
+                                            onClick={() => setQuantity(prev => (parseInt(prev, 10) || 1) + 1)}
+                                            style={{
+                                                width: '36px',
+                                                height: '40px',
+                                                background: '#222',
+                                                color: '#fff',
+                                                border: '1px solid #444',
+                                                borderRadius: '5px',
+                                                cursor: 'pointer',
+                                                fontSize: '18px',
+                                                fontWeight: 'bold'
+                                            }}
+                                        >
+                                            +
+                                        </button>
+                                    </div>
                                     <motion.button 
                                         className="product-data-submit" 
                                         onClick={handleAddToCart}

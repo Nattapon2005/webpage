@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useCart } from '../context/CartContext';
+import toast from 'react-hot-toast';
 import Seo from '../components/Seo';
 
 const donateAmounts = [
@@ -11,6 +13,30 @@ const donateAmounts = [
 ];
 
 const Donate = () => {
+    const { addToCart } = useCart();
+    const [customAmount, setCustomAmount] = useState('');
+
+    const handleDonate = (amount) => {
+        const num = parseFloat(amount);
+        if (isNaN(num) || num <= 0) {
+            toast.error('Please enter a valid donation amount');
+            return;
+        }
+
+        addToCart({
+            id: `donation-${num}`,
+            title: `Donation ($${num.toFixed(2)})`,
+            price: `$ ${num.toFixed(2)} USD`,
+            priceValue: num,
+            image: 'https://assets.website-files.com/5e853c3383474026e43f2c78/5e861d123df4d175e80e8beb_acme-gift-card.jpg'
+        }, 1);
+
+        toast.success(`Thank you! Added $${num.toFixed(2)} donation to your cart ❤️`, {
+            icon: '🤝',
+            duration: 4000
+        });
+    };
+
     return (
         <div>
             <Seo
@@ -53,18 +79,98 @@ const Donate = () => {
                             {donateAmounts.map((item, index) => (
                                 <motion.a
                                     key={item.amount}
-                                    href="#"
+                                    href={`#donate-${item.amount}`}
                                     title={item.note}
                                     initial={{ opacity: 0, y: 18 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.4, delay: 0.08 * index }}
-                                    whileHover={{ scale: 1.015 }}
-                                    whileTap={{ scale: 0.985 }}
+                                    whileHover={{ scale: 1.02, backgroundColor: '#d64747' }}
+                                    whileTap={{ scale: 0.98 }}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        handleDonate(item.amount);
+                                    }}
                                 >
                                     Donate ${item.amount}
                                 </motion.a>
                             ))}
+
+                            {/* Custom Donation Option placed cleanly inside the card */}
+                            <div style={{
+                                width: '100%',
+                                display: 'flex',
+                                gap: '10px',
+                                marginBottom: '20px'
+                            }}>
+                                <div style={{ position: 'relative', flex: 1 }}>
+                                    <span style={{
+                                        position: 'absolute',
+                                        left: '16px',
+                                        top: '50%',
+                                        transform: 'translateY(-50%)',
+                                        color: '#777',
+                                        fontWeight: 700,
+                                        fontSize: '18px'
+                                    }}>
+                                        $
+                                    </span>
+                                    <input 
+                                        type="number" 
+                                        min="1"
+                                        placeholder="Custom amount"
+                                        value={customAmount}
+                                        onChange={(e) => setCustomAmount(e.target.value)}
+                                        style={{
+                                            width: '100%',
+                                            height: '70px',
+                                            paddingLeft: '34px',
+                                            paddingRight: '14px',
+                                            border: '2px solid #ddd',
+                                            borderRadius: '5px',
+                                            fontSize: '18px',
+                                            fontWeight: 600,
+                                            color: '#111',
+                                            background: '#f9f9f9',
+                                            boxSizing: 'border-box',
+                                            outline: 'none'
+                                        }}
+                                        onKeyDown={(e) => {
+                                            if (e.key === 'Enter') {
+                                                e.preventDefault();
+                                                if (customAmount) {
+                                                    handleDonate(customAmount);
+                                                    setCustomAmount('');
+                                                }
+                                            }
+                                        }}
+                                    />
+                                </div>
+                                <button
+                                    type="button"
+                                    onClick={() => {
+                                        if (!customAmount) return;
+                                        handleDonate(customAmount);
+                                        setCustomAmount('');
+                                    }}
+                                    style={{
+                                        height: '70px',
+                                        padding: '0 28px',
+                                        background: '#222',
+                                        color: '#fff',
+                                        border: 'none',
+                                        borderRadius: '5px',
+                                        fontWeight: 700,
+                                        fontSize: '18px',
+                                        cursor: 'pointer',
+                                        transition: 'background 0.2s'
+                                    }}
+                                    onMouseOver={(e) => e.currentTarget.style.background = '#eb5757'}
+                                    onMouseOut={(e) => e.currentTarget.style.background = '#222'}
+                                >
+                                    Donate
+                                </button>
+                            </div>
                         </motion.div>
                     </div>
                 </div>

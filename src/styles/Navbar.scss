@@ -2,17 +2,13 @@
 
 
     /****************************  Your Cart   *************************/
+    .nav-cart-con,
+    .nav-cart .nav-cart-con {
+        width: 100% !important;
+    }
+
     nav {
         padding: 35px;
-
-        .nav-cart {
-
-            & .nav-cart-con {
-                width: 100%;
-                position: fixed;
-            }
-
-        }
 
 
         .container {
@@ -116,12 +112,9 @@
 
 @media only screen and (max-width: 768px) {
 
-    .nav-cart {
-
-        & .nav-cart-con {
-            width: 70%;
-        }
-
+    .nav-cart-con,
+    .nav-cart .nav-cart-con {
+        width: 70%;
     }
 
     nav {
@@ -230,13 +223,10 @@
 
 @media only screen and (max-width: 900px) {
 
-    .nav-cart {
-
-        & .nav-cart-con {
-            width: 70%;
-            position: fixed;
-        }
-
+    .nav-cart-con,
+    .nav-cart .nav-cart-con {
+        width: 70%;
+        position: fixed;
     }
 
     nav {

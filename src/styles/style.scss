@@ -28,27 +28,26 @@ body {
 
 /* nav-cart || close || Open */
 
-.nav-cart {
-    position: relative;
+.nav-cart-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9990;
+    cursor: pointer;
+}
 
-    & .nav-cart-bg {
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
-
-
-    & .nav-cart-con {
-        width: 40%;
-        height: 100%;
-        background: #fff;
-        position: fixed;
-        top: 0;
-        right: 0;
-        z-index: 99999;
+.nav-cart-con,
+.nav-cart .nav-cart-con {
+    width: 40%;
+    height: 100%;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100000;
 
         & .nav-cart-top {
             border-bottom: 1px solid #f1f1f1;
@@ -82,7 +81,9 @@ body {
 
         .scroll {
             height: 100%;
-            overflow: scroll;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding-bottom: 140px;
 
             & .nav-cart-class-product {
 
@@ -147,23 +148,60 @@ body {
 
 
                     & .nav-cart-class-product-price {
-                        width: 12%;
-                        height: 40px;
-                        margin-right: 10px;
+                        display: flex;
+                        align-items: center;
 
-                        & input {
-                            width: 100%;
-                            height: 40px;
-                            padding: 10px;
-                            border-radius: 5px;
-                            margin-top: 5px;
-                            border: 1px solid #000;
-                            outline: none;
-                            transition: .3s;
-                        }
+                        .cart-qty-wrapper {
+                            display: inline-flex;
+                            align-items: center;
+                            background: #f3f4f6;
+                            border: 1px solid #e5e7eb;
+                            border-radius: 8px;
+                            overflow: hidden;
 
-                        & input:hover {
-                            border: 2px solid #eb5757;
+                            .cart-qty-step {
+                                width: 28px;
+                                height: 32px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background: transparent;
+                                border: none;
+                                cursor: pointer;
+                                font-size: 16px;
+                                font-weight: bold;
+                                color: #374151;
+                                transition: background-color 0.2s, color 0.2s;
+
+                                &:hover {
+                                    background: #eb5757;
+                                    color: #fff;
+                                }
+                            }
+
+                            input {
+                                width: 34px;
+                                height: 32px;
+                                text-align: center;
+                                border: none;
+                                background: transparent;
+                                font-weight: 600;
+                                font-size: 14px;
+                                color: #111;
+                                padding: 0;
+                                margin: 0;
+                                -moz-appearance: textfield;
+
+                                &::-webkit-inner-spin-button,
+                                &::-webkit-outer-spin-button {
+                                    -webkit-appearance: none;
+                                    margin: 0;
+                                }
+
+                                &:focus {
+                                    outline: none;
+                                }
+                            }
                         }
                     }
                 }
@@ -230,18 +268,11 @@ body {
             }
         }
     }
-}
 
 nav {
     position: relative;
     background-color: #eb5757;
-    padding: 30px;
-    bottom: 20px;
-    /* 
-    position: sticky;
-    top: 0; 
-    2 อันนี้คือทํา nav มันติดอยู่ด้านบน
-    */
+    padding: 18px 30px;
     position: sticky;
     top: 0;
     z-index: 9999;
@@ -271,7 +302,6 @@ nav {
             & .menu-con {
                 padding: 0 15px;
                 color: #fff;
-                transition: .5s;
 
                 & .info-con {
                     display: inline-block;
@@ -279,12 +309,20 @@ nav {
                     color: #fff;
                     text-decoration: none;
                     padding: 8px 15px;
-                    transition: .3s;
+                    border-radius: 6px;
+                    font-weight: 500;
+                    transition: background-color 0.2s ease, color 0.2s ease;
+
+                    &.active {
+                        background-color: rgba(10, 10, 18, 0.7);
+                        color: #fff;
+                        font-weight: 500;
+                    }
                 }
 
                 & .info-con:hover {
                     background-color: #222;
-                    border-radius: 5px;
+                    border-radius: 6px;
                 }
 
             }

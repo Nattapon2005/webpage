@@ -91,25 +91,28 @@ const Home = () => {
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
-                            transition={{ duration: 0.5, delay: 0.1 }}
+                            whileHover={{ y: -6, scale: 1.02 }}
+                            transition={{ duration: 0.3 }}
                         >
-                            <div className="Outdoors-con">
-                                <div className="Outdoors-number">
-                                    <h1>01</h1>
+                            <Link to="/shop" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+                                <div className="Outdoors-con">
+                                    <div className="Outdoors-number">
+                                        <h1>01</h1>
+                                    </div>
+                                    <div className="Outdoors-con-logo">
+                                        <h1>
+                                            SHOP <br />
+                                            PRODUCTS
+                                        </h1>
+                                    </div>
                                 </div>
-                                <div className="Outdoors-con-logo">
-                                    <h1>
-                                        SHOP <br />
-                                        PRODUCTS
-                                    </h1>
+                                <div className="Outdoors-title">
+                                    <p>
+                                        Our full product line is still available online here on our site! Getting outside and hiking
+                                        is still something you can do. Get your gear now!
+                                    </p>
                                 </div>
-                            </div>
-                            <div className="Outdoors-title">
-                                <p>
-                                    Our full product line is still available online here on our site! Getting outside and hiking
-                                    is still something you can do. Get your gear now!
-                                </p>
-                            </div>
+                            </Link>
                         </motion.div>
 
                         <motion.div 
@@ -117,24 +120,27 @@ const Home = () => {
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
-                            transition={{ duration: 0.5, delay: 0.3 }}
+                            whileHover={{ y: -6, scale: 1.02 }}
+                            transition={{ duration: 0.3 }}
                         >
-                            <div className="Outdoors-con">
-                                <div className="Outdoors-number">
-                                    <h1>02</h1>
+                            <Link to="/donate" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+                                <div className="Outdoors-con">
+                                    <div className="Outdoors-number">
+                                        <h1>02</h1>
+                                    </div>
+                                    <div className="Outdoors-con-logo">
+                                        <h1>
+                                            DONATE
+                                        </h1>
+                                    </div>
                                 </div>
-                                <div className="Outdoors-con-logo">
-                                    <h1>
-                                        DONATE
-                                    </h1>
+                                <div className="Outdoors-title">
+                                    <p>
+                                        Since we've changed the way we operate to online only, and to ensure your safety, not all
+                                        our staff is working. Donate to keep them afloat.
+                                    </p>
                                 </div>
-                            </div>
-                            <div className="Outdoors-title">
-                                <p>
-                                    Since we've changed the way we operate to online only, and to ensure your safety, not all
-                                    our staff is working. Donate to keep them afloat.
-                                </p>
-                            </div>
+                            </Link>
                         </motion.div>
 
                         <motion.div 
@@ -142,25 +148,28 @@ const Home = () => {
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
-                            transition={{ duration: 0.5, delay: 0.5 }}
+                            whileHover={{ y: -6, scale: 1.02 }}
+                            transition={{ duration: 0.3 }}
                         >
-                            <div className="Outdoors-con">
-                                <div className="Outdoors-number">
-                                    <h1>03</h1>
+                            <Link to="/product/gift-card" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+                                <div className="Outdoors-con">
+                                    <div className="Outdoors-number">
+                                        <h1>03</h1>
+                                    </div>
+                                    <div className="Outdoors-con-logo">
+                                        <h1>
+                                            BUY <br />
+                                            GIFT CARDS
+                                        </h1>
+                                    </div>
                                 </div>
-                                <div className="Outdoors-con-logo">
-                                    <h1>
-                                        BUY <br />
-                                        GIFT CARDS
-                                    </h1>
+                                <div className="Outdoors-title">
+                                    <p>
+                                        Have all the outdoor gear you need for now? Buy a gift card and use it later or share it
+                                        with friends and family.
+                                    </p>
                                 </div>
-                            </div>
-                            <div className="Outdoors-title">
-                                <p>
-                                    Have all the outdoor gear you need for now? Buy a gift card and use it later or share it
-                                    with friends and family.
-                                </p>
-                            </div>
+                            </Link>
                         </motion.div>
                     </div>
                 </div>
