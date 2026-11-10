@@ -1,25 +1,42 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import Seo from '../components/Seo';
 
 const Shop = () => {
     return (
         <div>
+            <Seo
+                title="Shop Outdoor Gear"
+                description="Shop tents, packs, tumblers and gift cards from Acme Outdoors. Open 24/7/365 with lifetime warranty and on-time delivery."
+                path="/shop"
+            />
             <div className="shop-product">
                 <div className="container">
-                    <div className="shop-product-con">
+                    <motion.div
+                        className="shop-product-con"
+                        initial={{ opacity: 0, y: 24 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                    >
                         <h1>Shop Our Products</h1>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
 
             <div className="featured-item">
                 <div className="container">
-                    <div className="featured-item-con">
+                    <motion.div
+                        className="featured-item-con"
+                        initial={{ opacity: 0, y: 34 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: '-80px' }}
+                        transition={{ duration: 0.7, ease: 'easeOut' }}
+                    >
                         <motion.div 
                             className="featured-item-con-item"
-                            whileHover={{ scale: 1.02 }}
-                            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                            whileHover={{ scale: 1.015, y: -3 }}
+                            transition={{ type: "spring", stiffness: 300, damping: 22 }}
                         >
                             <div className="white-tent">
                                 <h2>White Tent</h2>
@@ -29,14 +46,20 @@ const Shop = () => {
                                 <Link to="/product/white-tent">Featured Item</Link>
                             </div>
                         </motion.div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
 
             <div className="shop-by-category">
                 <div className="container">
                     <div className="shop-by-category-con">
-                        <div className="shop-by-category-left">
+                        <motion.div
+                            className="shop-by-category-left"
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, margin: '-80px' }}
+                            transition={{ duration: 0.6 }}
+                        >
                             <h2>Shop by Category</h2>
                             <div className="shop-by-category-menu-item">
                                 <a href="#">Gift Cards</a>
@@ -44,12 +67,15 @@ const Shop = () => {
                                 <a href="#">Accessories</a>
                                 <a href="#">Packs</a>
                             </div>
-                        </div>
+                        </motion.div>
 
                         <div className="shop-by-category-right">
                             <motion.div 
                                 className="shop-by-category-info"
-                                whileHover={{ y: -5, boxShadow: "0 10px 20px rgba(0,0,0,0.1)" }}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: '-50px' }}
+                                whileHover={{ y: -6, boxShadow: "0 22px 48px rgba(10,10,18,0.12)" }}
                                 transition={{ type: "tween", duration: 0.2 }}
                             >
                                 <div className="shop-by-category-info-top">
@@ -68,7 +94,10 @@ const Shop = () => {
             
                             <motion.div 
                                 className="shop-by-category-info"
-                                whileHover={{ y: -5, boxShadow: "0 10px 20px rgba(0,0,0,0.1)" }}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: '-50px' }}
+                                whileHover={{ y: -6, boxShadow: "0 22px 48px rgba(10,10,18,0.12)" }}
                                 transition={{ type: "tween", duration: 0.2 }}
                             >
                                 <div className="shop-by-category-info-top">
@@ -87,7 +116,10 @@ const Shop = () => {
             
                             <motion.div 
                                 className="shop-by-category-info"
-                                whileHover={{ y: -5, boxShadow: "0 10px 20px rgba(0,0,0,0.1)" }}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: '-50px' }}
+                                whileHover={{ y: -6, boxShadow: "0 22px 48px rgba(10,10,18,0.12)" }}
                                 transition={{ type: "tween", duration: 0.2 }}
                             >
                                 <div className="shop-by-category-info-top">
@@ -109,7 +141,10 @@ const Shop = () => {
 
                             <motion.div 
                                 className="shop-by-category-info"
-                                whileHover={{ y: -5, boxShadow: "0 10px 20px rgba(0,0,0,0.1)" }}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: '-50px' }}
+                                whileHover={{ y: -6, boxShadow: "0 22px 48px rgba(10,10,18,0.12)" }}
                                 transition={{ type: "tween", duration: 0.2 }}
                             >
                                 <div className="shop-by-category-info-top">

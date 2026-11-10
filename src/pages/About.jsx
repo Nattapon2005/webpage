@@ -1,12 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import Seo from '../components/Seo';
 
 const About = () => {
     return (
         <div>
+            <Seo
+                title="About Us"
+                description="Meet the team behind Acme Outdoors. For more than 30 years we have been leading the way across Oklahoma with lifetime warranty, fast delivery and best-in-class service."
+                path="/about"
+            />
             <header className="Awaits">
                 <div className="container">
-                    <div className="Awaits-con">
+                    <motion.div
+                        className="Awaits-con"
+                        initial={{ opacity: 0, y: 34, filter: 'blur(8px)' }}
+                        animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                        transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
+                    >
                         <h4>
                             Your Adventure <br />
                             Awaits
@@ -19,14 +31,20 @@ const About = () => {
                         <div className="Serving-shop">
                             <Link className="Shop-Merch" to="/shop">Shop Merch</Link>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </header>
 
             <div className="OUTDOORS">
                 <div className="container">
                     <div className="OUTDOORS-con">
-                        <div className="OUTDOORS-con-top">
+                        <motion.div
+                            className="OUTDOORS-con-top"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: '-80px' }}
+                            transition={{ duration: 0.7, ease: 'easeOut' }}
+                        >
                             <p>WHY ACME OUTDOORS?</p>
                             <h1>We’re the best in the business.</h1>
                             <div className="OUTDOORS-title">
@@ -34,11 +52,17 @@ const About = () => {
                                     From more than 30 years, we’ve been leading the way across Oklahoma — creating the best possible customer experience since 1989.
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
 
                     <div className="outdoors-con-info">
-                        <div className="outdoors-items">
+                        <motion.div
+                            className="outdoors-items"
+                            initial={{ opacity: 0, y: 36 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: '-60px' }}
+                            transition={{ duration: 0.55, delay: 0.05 }}
+                        >
                             <img src="https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e84b9ccd071025d67c7e431_verified.svg" alt="" />
                             <h1>Lifetime Warranty</h1>
                             <div className="outdoors-title-button">
@@ -46,9 +70,15 @@ const About = () => {
                                     All our products — whether we make them or not — are backed by our lifetime warranty.
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div className="outdoors-items">
+                        <motion.div
+                            className="outdoors-items"
+                            initial={{ opacity: 0, y: 36 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: '-60px' }}
+                            transition={{ duration: 0.55, delay: 0.15 }}
+                        >
                             <img src="https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e84ba18359d4c7fc8ba04d2_cart.svg" alt="" />
                             <h1>Shopping Experience</h1>
                             <div className="outdoors-title-button">
@@ -56,9 +86,15 @@ const About = () => {
                                     All our products — whether we make them or not — are backed by our lifetime warranty.
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div className="outdoors-items">
+                        <motion.div
+                            className="outdoors-items"
+                            initial={{ opacity: 0, y: 36 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: '-60px' }}
+                            transition={{ duration: 0.55, delay: 0.25 }}
+                        >
                             <img src="https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e84ba26d07102b2bcc7e4fb_transport.svg" alt="" />
                             <h1>On-time Delivery</h1>
                             <div className="outdoors-title-button">
@@ -66,9 +102,15 @@ const About = () => {
                                     All our products — whether we make them or not — are backed by our lifetime warranty.
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div className="outdoors-items">
+                        <motion.div
+                            className="outdoors-items"
+                            initial={{ opacity: 0, y: 36 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: '-60px' }}
+                            transition={{ duration: 0.55, delay: 0.35 }}
+                        >
                             <img src="https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e84ba313e8232516a7da902_chat-alt.svg" alt="" />
                             <h1>Best in Class Service</h1>
                             <div className="outdoors-title-button">
@@ -76,7 +118,7 @@ const About = () => {
                                     All our products — whether we make them or not — are backed by our lifetime warranty.
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>
@@ -84,10 +126,22 @@ const About = () => {
             <div className="Meet-about">
                 <div className="container">
                     <div className="Meet-about-total-con">
-                        <div className="Meet-about-right">
+                        <motion.div
+                            className="Meet-about-right"
+                            initial={{ opacity: 0, x: -60 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, margin: '-100px' }}
+                            transition={{ duration: 0.8, ease: 'easeOut' }}
+                        >
                             <img src="https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e84cdfbaf8c176df76d51a3_sept-commercial-Cqu3DdNwtKQ-unsplash%20(1)%20(1).jpg" alt="" />
-                        </div>
-                        <div className="Meet-about-con">
+                        </motion.div>
+                        <motion.div
+                            className="Meet-about-con"
+                            initial={{ opacity: 0, x: 60 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, margin: '-100px' }}
+                            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.1 }}
+                        >
                             <div className="Meet-about-con-left">
                                 <h4>Meet the Owners</h4>
                                 <div className="Meet-about-con-title">
@@ -123,7 +177,7 @@ const About = () => {
                                     </p>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>
@@ -131,7 +185,13 @@ const About = () => {
             <div className="profrile">
                 <div className="container">
                     <div className="profrile-con">
-                        <div className="profrile-user">
+                        <motion.div
+                            className="profrile-user"
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: '-80px' }}
+                            transition={{ duration: 0.6 }}
+                        >
                             <img src="https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e84d114eef39554b0e943d8_John%20Doe.png" alt="" />
                             <h1>John Doe</h1>
                             <div className="profrile-title">
@@ -145,8 +205,14 @@ const About = () => {
                                     risus tristique posuere.
                                 </p>
                             </div>
-                        </div>
-                        <div className="profrile-user">
+                        </motion.div>
+                        <motion.div
+                            className="profrile-user"
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: '-80px' }}
+                            transition={{ duration: 0.6, delay: 0.12 }}
+                        >
                             <img src="https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e84d11d180ebb04f6b16bd9_Jane%20Doe.png" alt="" />
                             <h1>Jane Doe</h1>
                             <div className="profrile-title">
@@ -160,7 +226,7 @@ const About = () => {
                                     vitae risus tristique posuere.
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>
@@ -168,7 +234,13 @@ const About = () => {
             <div className="Need-held">
                 <div className="container">
                     <div className="Need-held-con">
-                        <div className="Need-held-con-footer">
+                        <motion.div
+                            className="Need-held-con-footer"
+                            initial={{ opacity: 0, y: 36 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: '-80px' }}
+                            transition={{ duration: 0.7 }}
+                        >
                             <h4>Need Help?</h4>
                             <div className="Need-held-con-title">
                                 <p>Need help or assistance? Our team is standing</p>
@@ -181,7 +253,7 @@ const About = () => {
                                     Contact Support
                                 </button>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>

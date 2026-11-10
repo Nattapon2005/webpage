@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -7,13 +7,58 @@ import '../styles/Navbar.scss';
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isCartOpen, setIsCartOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+    const navRef = useRef(null);
     const { cartItems, removeFromCart, updateQuantity, cartTotal, cartCount } = useCart();
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
     const toggleCart = () => setIsCartOpen(!isCartOpen);
 
+    useEffect(() => {
+        const handleScroll = () => setIsScrolled(window.scrollY > 12);
+
+        handleScroll();
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    useEffect(() => {
+        const nav = navRef.current;
+        if (!nav) return undefined;
+
+        const handlePointerMove = (event) => {
+            const rect = nav.getBoundingClientRect();
+            nav.style.setProperty('--glow-x', `${event.clientX - rect.left}px`);
+            nav.style.setProperty('--glow-y', `${event.clientY - rect.top}px`);
+        };
+
+        nav.addEventListener('pointermove', handlePointerMove, { passive: true });
+
+        return () => nav.removeEventListener('pointermove', handlePointerMove);
+    }, []);
+
+    useEffect(() => {
+        const shouldLock = isMenuOpen || isCartOpen;
+        document.body.style.overflow = shouldLock ? 'hidden' : '';
+
+        const handleKeyDown = (event) => {
+            if (event.key === 'Escape') {
+                setIsMenuOpen(false);
+                setIsCartOpen(false);
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+
+        return () => {
+            document.body.style.overflow = '';
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [isMenuOpen, isCartOpen]);
+
     return (
-        <nav>
+        <nav ref={navRef} className={isScrolled ? 'is-scrolled' : undefined}>
             {/* Cart Modal */}
             <AnimatePresence>
                 {isCartOpen && (
@@ -126,7 +171,7 @@ const Navbar = () => {
                                     exit={{ opacity: 0, y: -20 }}
                                     transition={{ duration: 0.3 }}
                                 >
-                                    <div className="mobile-menu-close" onClick={toggleMenu}>
+                                    <div className="mobile-menu-close" onClick={toggleMenu} role="button" tabIndex={0} aria-label="Close navigation menu" onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') toggleMenu(); }}>
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                             <path d="M18 6L6 18M6 6l12 12"></path>
                                         </svg>
@@ -161,12 +206,12 @@ const Navbar = () => {
                             </div>
                         </div>
 
-                        <div onClick={toggleCart} id="OpenCartPrice" className="imgs" style={{ cursor: 'pointer' }}>
+                        <div onClick={toggleCart} id="OpenCartPrice" className="imgs" style={{ cursor: 'pointer' }} role="button" tabIndex={0} aria-label={`Open cart, ${cartCount} items`} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') toggleCart(); }}>
                             <p id="price">{cartCount}</p>
                             <img src="https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e86146bb854797d12a30a13_cart.svg" alt="Cart" />
                         </div>
 
-                        <div className="menu-icon-nav-open" onClick={toggleMenu}>
+                        <div className="menu-icon-nav-open" onClick={toggleMenu} role="button" tabIndex={0} aria-label="Open navigation menu" onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') toggleMenu(); }}>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                 <path d="M3 12h18M3 6h18M3 18h18"></path>
                             </svg>

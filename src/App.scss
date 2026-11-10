@@ -10,6 +10,9 @@
 @use './styles/Donate.scss';
 @use './styles/Contact.scss';
 
+// High-tech animation layer + responsive refinements (loaded last)
+@use './styles/tech.scss';
+
 // Import global variables and fonts
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 

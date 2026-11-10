@@ -1,8 +1,15 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import Seo from '../components/Seo';
 
 const Contact = () => {
     return (
         <div>
+            <Seo
+                title="Contact Us"
+                description="Contact Acme Outdoors in Oklahoma City. Send a message, get order support, or call our general inquiries line at (405) 555-5555."
+                path="/contact"
+            />
             <div className="Contact">
                 <div className="container">
                     <div className="Contact-con">
@@ -10,10 +17,22 @@ const Contact = () => {
                         <div className="Contact-img-left">
                         </div>
 
-                        <h1>Contact Acme Outdoors</h1>
+                        <motion.h1
+                            initial={{ opacity: 0, y: 24 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6 }}
+                        >
+                            Contact Acme Outdoors
+                        </motion.h1>
 
                         <div className="Contact-items">
-                            <div className="Contact-items-top">
+                            <motion.div
+                                className="Contact-items-top"
+                                initial={{ opacity: 0, y: 36 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: '-60px' }}
+                                transition={{ duration: 0.6 }}
+                            >
                                 <div className="Contact-items-top-con">
                                     <img src="https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e84ba313e8232516a7da902_chat-alt.svg" alt="" />
                                     <h2>Contact Us</h2>
@@ -24,9 +43,15 @@ const Contact = () => {
                                     </p>
                                     <a href="#">Send Us A Message</a>
                                 </div>
-                            </div>
+                            </motion.div>
 
-                            <div className="Contact-items-top">
+                            <motion.div
+                                className="Contact-items-top"
+                                initial={{ opacity: 0, y: 36 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: '-60px' }}
+                                transition={{ duration: 0.6, delay: 0.12 }}
+                            >
                                 <div className="Contact-items-top-con">
                                     <img src="https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e850414db1f6ebfba8bc42d_chat-warning.svg" alt="" />
                                     <h2>Get Support</h2>
@@ -37,7 +62,7 @@ const Contact = () => {
                                     </p>
                                     <a href="#">Contact Support</a>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </div>
@@ -46,7 +71,13 @@ const Contact = () => {
             <div className="contact-from">
                 <div className="container">
                     <div className="contact-from-con">
-                        <div className="Contact-up">
+                        <motion.div
+                            className="Contact-up"
+                            initial={{ opacity: 0, x: -40 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, margin: '-80px' }}
+                            transition={{ duration: 0.7 }}
+                        >
                             <h1>Contact Us</h1>
                             <p className="contact-up-btn-top">
                                 Acme Outdoors <br />
@@ -71,9 +102,15 @@ const Contact = () => {
                                     </p>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div className="Contact-form">
+                        <motion.div
+                            className="Contact-form"
+                            initial={{ opacity: 0, x: 40 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, margin: '-80px' }}
+                            transition={{ duration: 0.7, delay: 0.1 }}
+                        >
                             <form action="" method="post">
                                 <h1>Contact Form</h1>
                                 <p>Send us a message and we'll get back to you as soon as we can!</p>
@@ -87,14 +124,14 @@ const Contact = () => {
                                 </div>
                                 <div className="Contact-form-input">
                                     <label>Your Message</label>
-                                    <input className="Contact-form-input-message" type="text" placeholder="Enter your message" />
+                                    <textarea className="Contact-form-input-message" rows="4" placeholder="Enter your message"></textarea>
                                 </div>
 
                                 <button type="submit">
                                     Submit
                                 </button>
                             </form>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>

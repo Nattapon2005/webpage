@@ -1,10 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import Seo from '../components/Seo';
+
+const homeJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Acme Outdoors',
+    url: 'https://acmeoutdoors.com/',
+    description: 'Outdoor and adventure shop in the Boathouse District of Oklahoma City, serving adventurers since 1989.'
+};
 
 const Home = () => {
     return (
         <div>
+            <Seo
+                title="Outdoor & Adventure Shop"
+                description="Serving you since 1989. Shop outdoor gear, tents, packs, tumblers and gift cards from Acme Outdoors in Oklahoma City."
+                path="/"
+                jsonLd={homeJsonLd}
+            />
             <header>
                 <div className="container">
                     <div className="Serving-con">
@@ -198,6 +213,7 @@ const Home = () => {
                                 initial={{ opacity: 0, y: 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: "-50px" }}
+                                whileHover={{ y: -6, transition: { duration: 0.3 } }}
                                 transition={{ duration: 0.5, delay: 0.1 }}
                             >
                                 <div className="Open-info-top">
@@ -219,6 +235,7 @@ const Home = () => {
                                 initial={{ opacity: 0, y: 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: "-50px" }}
+                                whileHover={{ y: -6, transition: { duration: 0.3 } }}
                                 transition={{ duration: 0.5, delay: 0.3 }}
                             >
                                 <div className="Open-info-top">
@@ -240,6 +257,7 @@ const Home = () => {
                                 initial={{ opacity: 0, y: 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: "-50px" }}
+                                whileHover={{ y: -6, transition: { duration: 0.3 } }}
                                 transition={{ duration: 0.5, delay: 0.5 }}
                             >
                                 <div className="Open-info-top">

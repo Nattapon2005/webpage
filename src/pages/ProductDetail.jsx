@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { motion } from 'framer-motion';
 import toast from 'react-hot-toast';
+import Seo from '../components/Seo';
 
 const products = {
     'gift-card': {
@@ -10,6 +11,7 @@ const products = {
         title: 'Gift Card',
         price: '$ 25.00 USD',
         priceValue: 25.00,
+        description: 'An Acme Outdoors gift card — the perfect gift for every adventure, ready whenever they are.',
         image: 'https://assets.website-files.com/5e853c3383474026e43f2c78/5e861d123df4d175e80e8beb_acme-gift-card.jpg'
     },
     'tin-coffee-tumbler': {
@@ -17,6 +19,7 @@ const products = {
         title: 'Tin Coffee Tumbler',
         price: '$ 35.00 USD',
         priceValue: 35.00,
+        description: 'A durable tin coffee tumbler built for camp mornings and long trails. Keep your coffee hot wherever you roam.',
         image: 'https://assets.website-files.com/5e853c3383474026e43f2c78/5e8542c1248e59128e08e3e9_ryan-holloway-JyDmUaXMib4-unsplash.jpg'
     },
     'blue-canvas-pack': {
@@ -24,6 +27,7 @@ const products = {
         title: 'Blue Canvas Pack',
         price: '$ 95.00 USD',
         priceValue: 95.00,
+        description: 'A rugged blue canvas pack with room for everything your next day hike demands. Backed by our lifetime warranty.',
         image: 'https://assets.website-files.com/5e853c3383474026e43f2c78/5e85425605cae11f20d46181_denisse-leon-J7CjWufjmg4-unsplash.jpg'
     },
     'green-canvas-pack': {
@@ -31,6 +35,7 @@ const products = {
         title: 'Green Canvas Pack',
         price: '$ 125.00 USD',
         priceValue: 125.00,
+        description: 'The green canvas pack is built for longer trips and heavier loads, with durable materials and a lifetime warranty.',
         image: 'https://assets.website-files.com/5e853c3383474026e43f2c78/5e8542198347409e463f436b_jakob-owens-O_bhy3TnSYU-unsplash.jpg'
     },
     'white-tent': {
@@ -38,6 +43,7 @@ const products = {
         title: 'White Tent',
         price: '$ 200.00 USD',
         priceValue: 200.00,
+        description: 'A spacious white tent for unforgettable nights under the stars. Easy to pitch, weather-ready and built to last.',
         image: 'https://assets.website-files.com/5e853c3383474026e43f2c78/5e856e41c718420c18dd6751_patrick-hendry-eDgUyGu93Yw-unsplash.jpg'
     }
 };
@@ -47,6 +53,29 @@ const ProductDetail = () => {
     const product = products[id];
     const [quantity, setQuantity] = useState(1);
     const { addToCart } = useCart();
+
+    const productJsonLd = useMemo(() => {
+        if (!product) return null;
+
+        return {
+            '@context': 'https://schema.org',
+            '@type': 'Product',
+            name: product.title,
+            description: product.description,
+            image: product.image,
+            brand: {
+                '@type': 'Brand',
+                name: 'Acme Outdoors'
+            },
+            offers: {
+                '@type': 'Offer',
+                url: `https://acmeoutdoors.com/product/${product.id}`,
+                priceCurrency: 'USD',
+                price: product.priceValue.toFixed(2),
+                availability: 'https://schema.org/InStock'
+            }
+        };
+    }, [product]);
 
     if (!product) {
         return <Navigate to="/shop" />;
@@ -61,6 +90,15 @@ const ProductDetail = () => {
 
     return (
         <div>
+            <Seo
+                title={product.title}
+                description={product.description}
+                path={`/product/${product.id}`}
+                image={product.image}
+                type="product"
+                imageAlt={`${product.title} — Acme Outdoors`}
+                jsonLd={productJsonLd}
+            />
             <div className="responding">
                 <div className="container">
                     <div className="responding-con">
